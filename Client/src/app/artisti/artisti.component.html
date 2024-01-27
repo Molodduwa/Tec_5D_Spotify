@@ -1,0 +1,38 @@
+<div class="container text-center">
+    <h1>Ricerca degli Artisti</h1>
+    
+    <p>
+      <input type="text" #newquery>
+      <button (click)="submit(newquery)">Search</button>
+    </p>
+    </div>
+    
+    
+    
+    <div *ngIf="results">
+        <div *ngIf="!results.artists || results.artists.items.length ==0">
+            <div class="container text-center">
+                Non sono stati trovati dati per: '{{ query }}'
+            </div>
+        </div>
+        
+        <div *ngIf="results.artists &&  results.artists.items.length > 0">
+            <div class="container text-center"><h1> Risultati trovati per: '{{ query }}'</h1></div>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let t of results.artists.items">
+                  <div class="card">
+                    <img *ngIf="t.images && t.images.length > 0" src="{{ t.images[0].url }}" class="mx-auto d-block" alt="home" width="400" height="400">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Nome: {{ t.name }} </h5>
+                      <p class="card-text"> Followers: {{ t.followers.total }} </p>
+                      <p class="card-text" *ngIf="t.genres && t.genres.length > 0"> Genere Musicale: {{ t.genres[0] }} </p>
+                    </div>
+                    <div class="card-footer text-center">
+                      <small class="text-muted">Popolaritá: {{ t.popularity }}</small>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
