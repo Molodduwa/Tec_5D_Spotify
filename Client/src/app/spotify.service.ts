@@ -12,9 +12,9 @@ export class SpotifyService {
   //url per oauth: https://developer.spotify.com/console/get-search-item/
   //Ottengo il modulo HttpClient
   constructor(private http: HttpClient) { }
-  Token="Bearer BQBwATA7UFIwo1uqGQdoScNcHeqk7uiEiijensqV5BkoYSOpLD1Tv4Xx7_SKpZRhs-EfuUNuon-bdW0yK4U-_iOwTV1tZ9WinZyfpl31Cl-wFvW7Y5GbA-StNmqSp7tLz6R8HAwHBZd0knnDW9kte0V7Ap-Trlmx1CFAqTEsTNfLLxV8LaQ"
+  Token="Bearer BQD0vingu_-Y2MLPgw9hw_ihI-uLi6KCV6vgpTVegRnuEy-mPw5FgAHP7nw7BnjlhRfbDhuOUFKb-LLeeyhCrK8LBx5SMawuTwecn6t_VNYUlcBuRFvOK2DQgR7b27p-_Ci0FxOSKUhi7e4qRiMGFbYNjBWXEF3gtCuF7T2Rqi9socWWCxI"
   searchTrack(query: string) {
-    const url = `https://api.spotify.com/v1/search?q=${query}&type=track`;
+    const url = `https://api.spotify.com/v1/search?q=${query}&type=track&limit=18`;
     const headers = new HttpHeaders({
       Authorization: this.Token
         
@@ -27,7 +27,7 @@ export class SpotifyService {
 
 
   searchAlbums(query: string) {
-    const url = `https://api.spotify.com/v1/search?q=${query}&type=album`;
+    const url = `https://api.spotify.com/v1/search?q=${query}&type=album&limit=18`;
     const headers = new HttpHeaders({
       Authorization: this.Token
     
@@ -39,7 +39,7 @@ export class SpotifyService {
   }
 
   searchArtist(query: string) {
-    const url = `https://api.spotify.com/v1/search?q=${query}&type=artist&limit=8`;
+    const url = `https://api.spotify.com/v1/search?q=${query}&type=artist&limit=9`;
     const headers = new HttpHeaders({
       Authorization: this.Token
     });

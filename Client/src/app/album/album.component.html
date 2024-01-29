@@ -22,12 +22,12 @@
             <div class="row">
                 <div class="col-md-4" *ngFor="let t of results.albums.items">
                   <div class="card">
-                    <img src="{{ t.images[0].url }}" class=" mx-auto d-block"  alt="home" width="400" height="400">
+                    <img src="{{ t.images[0].url }}" class="mx-auto d-block"  alt="home" width="500" height="500">
                     <div class="card-body text-center">
                       <h5 class="card-title">Album: {{ t.name }} </h5>
                       <p class="card-text"> Artista: {{ t.artists[0].name }} </p>
                     </div>
-                    <div class="card-footer text-center">
+                    <div class="card-footer text-center d-flex align-items-center justify-content-center">
                       <small class="text-muted">Data di rilascio: {{ t.release_date }}</small>
                     </div>
                   </div>
