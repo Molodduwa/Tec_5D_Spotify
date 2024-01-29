@@ -6,10 +6,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'  
 })
 export class SpotifyService {
+
+
+  
   //url per oauth: https://developer.spotify.com/console/get-search-item/
   //Ottengo il modulo HttpClient
   constructor(private http: HttpClient) { }
-  Token="Bearer BQA3dnXfj7X5-1ZjqpGRlbe45rz7khZWIxtHxYi_thm3FBHZjmNVD3yCGDCmYXAEikkP10pamt8kBo-iNZIvzBbzE3rATBF5zVMe0BrbAZVdAl8dALLM5MmON1BqVueUg1nq959IaV19WCLFXLVvmVPJe9-OiSQrJXXD-ks0F0CvKirkEfQ"
+  Token="Bearer BQBwATA7UFIwo1uqGQdoScNcHeqk7uiEiijensqV5BkoYSOpLD1Tv4Xx7_SKpZRhs-EfuUNuon-bdW0yK4U-_iOwTV1tZ9WinZyfpl31Cl-wFvW7Y5GbA-StNmqSp7tLz6R8HAwHBZd0knnDW9kte0V7Ap-Trlmx1CFAqTEsTNfLLxV8LaQ"
   searchTrack(query: string) {
     const url = `https://api.spotify.com/v1/search?q=${query}&type=track`;
     const headers = new HttpHeaders({

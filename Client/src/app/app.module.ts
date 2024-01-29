@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ArtistiComponent } from './artisti/artisti.component';
 import { AlbumComponent } from './album/album.component';
 import { BraniComponent } from './brani/brani.component';
-import { PlayBComponent } from './play-b/play-b.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { PlayBComponent } from './play-b/play-b.component';
     ArtistiComponent,
     AlbumComponent,
     BraniComponent,
-    PlayBComponent
+
   ],
   imports: [
     BrowserModule,

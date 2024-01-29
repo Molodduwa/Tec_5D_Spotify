@@ -1,12 +1,13 @@
-<div class="container text-center">
-<h1>Ricerca del Brano</h1>
+<div class="container text-center mt-5">
+  <h1 class="display-4">Ricerca del Brano</h1>
 
-<p>
-  <input type="text" #newquery>
-  <button (click)="submit(newquery)">Search</button>
-</p>
+  <div class="input-group mt-3">
+    <input type="text" #newquery class="form-control" placeholder="Inserisci il brano">
+    <div class="input-group-append">
+      <button (click)="submit(newquery)" class="btn btn-dark btn-outline-light">Cerca</button>
+    </div>
+  </div>
 </div>
-
 
 
 <div *ngIf="results">
@@ -25,6 +26,13 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">Brano: {{ t.name }} </h5>
                   <p class="card-text"> Artista: {{ t.artists[0].name }} </p>
+                  
+                  <ng-container *ngIf="t.preview_url">
+                    <video controls=""  name="media">
+                      <source src="{{t.preview_url}}" type="audio/mpeg">
+                    </video>
+                  </ng-container>
+                  
                 </div>
                 <div class="card-footer text-center">
                   <small class="text-muted">Album: {{ t.album.name }}</small>

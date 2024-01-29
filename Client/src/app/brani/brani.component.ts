@@ -14,9 +14,7 @@ export class BraniComponent {
   obsTrack: Observable<Object>;
   results: any;
   // faccio iniettare lo spotify service e faccio una ricerca
-  constructor(public spotify: SpotifyService) {
-   
-  }
+  constructor(public spotify: SpotifyService) { }
 
   submit(query:HTMLInputElement): void {
     if (!query.value) {

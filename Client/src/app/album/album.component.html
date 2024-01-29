@@ -1,12 +1,13 @@
-<div class="container text-center">
-    <h1>Ricerca del Album</h1>
-    
-    <p>
-      <input type="text" #newquery>
-      <button (click)="submit(newquery)">Search</button>
-    </p>
+<div class="container text-center mt-5 ">
+  <h1 class="display-4">Ricerca dell'Album </h1>
+
+  <div class="input-group mt-3">
+    <input type="text" #newquery class="form-control" placeholder="Inserisci l'Album">
+    <div class="input-group-append">
+      <button (click)="submit(newquery)" class="btn btn-dark btn-outline-light">Cerca</button>
     </div>
-    
+  </div>
+</div>
     
     
     <div *ngIf="results">
